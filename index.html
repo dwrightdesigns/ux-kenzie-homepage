@@ -1,47 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Kenzie Academy</title>
-  <meta name="author" content="Chok Ooi">
-  <meta name="description" content="Kenzie Academy is a campus-based and online school that is designed and taught by industry practitioners. It is a unique community that equips you with necessary skills and support to launch your career in tech.">
-  <meta name="keywords" content="ux,engineering,marketing,coding,school">
-  <link rel="shortcut icon" href="https://www.kenzie.academy/favicon.ico" type="image/vnd.microsoft.icon">
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Nunito" type="text/css">
-  <link rel="stylesheet" href="style.css" type="text/css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kenzie</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="#">Admissions</a></li>
-        <li><a href="#">Programs</a></li>
-        <li><a href="#">Pricing</a></li>
-        <li><a class="blue-button" href="#">Schedule a Tour</a></li>
-      </ul>
-    </nav>
+    <header>
+      <div class="navbar">
+        <nav class="navbar__element">
+          <div class="navbar__logo">
+            <img
+              src="https://res-5.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco/v1507162903/qkpagi7sv8temclfcfjp.png"
+              alt=""
+            />
+          </div>
+          <ul>
+            <li><a href="#">Admissions</a></li>
+            <li><a href="#">Programs</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li class="navbar--modifier"><a href="#">Schedule a Tour</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-    <section class="hero">
-      <h1 style="line-height: 0; color: red;">Design your tech career</h1>
-      <h2>Kenzie Academy is a two-year learning track and apprenticeship program.</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/FqVHe2BGdEw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </section>
+    <main>
+      <div class="hero">
+        <h1>Design your tech career</h1>
+        <p>
+          Kenzie Academy is a two-year learning track and apprenticeship
+          program.
+        </p>
+        <iframe
+          width="560"
+          height="395"
+          src="https://www.youtube.com/embed/UBATWULk8CU"
+          frameborder="0"
+        ></iframe>
+      </div>
 
-    <section class="signup-form">
-      <h3>Let's Chat.</h3>
-      <p>Kenzie Academy is no small commitment. If we've piqued your interest today, we'd love to keep the conversation going.</p>
-      
-      <form>
-        <div class="name">
-          <input placeholder="First Name" />
-          <input placeholder="Last Name" />
-        </div>
-        <input placeholder="Email" />
-        <input placeholder="Phone" />
-        <input type="submit"
-      </form>
-    </section>
+      <section class="signup">
+        <h3>Let's Chat.</h3>
+        <p>
+          Kenzie Academy is no small commitment. If we've piqued your interest
+          today, we'd love to keep the conversation going.
+        </p>
 
+        <form class="signup__form">
+          <div class="signup--name">
+            <input placeholder="First Name" />
+            <input placeholder="Last Name" />
+          </div>
+          <div class="signup--info">
+            <input placeholder="Email" />
+            <input placeholder="Phone" />
+          </div>
+          <div class="signup__button">
+            <input type="submit" />
+          </div>
+        </form>
+      </section>
+    </main>
   </body>
 </html>

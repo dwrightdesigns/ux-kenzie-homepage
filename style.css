@@ -1,53 +1,205 @@
+/* Base Styles (overall website styles) */
+
+html,
 body {
-  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
-  text-align: center;
-  font-size: 200%;
+body {
+  font-size: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-h2 {
-  text-align: center;
-  font-weight: 100;
-  font-size: 110%;
+body * {
+  box-sizing: border-box;
 }
 
-nav {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  text-orientation: capitalize;
+}
+
+ul,
+p {
+  margin: 0;
+}
+
+p {
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  transition: opacity 0.15s ease-in-out;
+  font-weight: 600;
+  color: inherit;
+}
+
+.navbar__element li:hover {
+  opacity: 0.7;
+}
+
+img {
+  width: 100%;
+}
+
+:root {
+  --kenziemain: rgba(2, 53, 108, 1);
+  --kenziecomp: rgba(48, 51, 75, 1);
+  --kenzielight: rgba(255, 255, 255, 1);
+}
+
+/* Layout Styles (manipulating content layout) */
+
+.container {
+  margin: 0;
+  padding: 0 30px;
+  max-width: 1200px;
+}
+
+.navbar {
+  width: 100%;
+}
+
+/* Block Styles */
+
+.navbar ul {
+  display: flex;
+  margin: 1em;
+}
+
+.navbar__element {
+  color: var(--kenziemain);
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar--modifier {
+  color: var(--kenzielight);
+  background-color: var(--kenziemain);
+  border-radius: .2em;
+}
+
+.navbar--modifier:hover {
+  opacity: 0.7;
+}
+
+.navbar li {
+  list-style-type: none;
+  padding: 1em;
+}
+
+.navbar__logo {
+  display: flex;
+  justify-content: flex-start;
+  min-width: 5em;
+  max-width: 5em;
+  min-height: 5em;
+  max-height: 5em;
+}
+
+.hero {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-
+  justify-content: center;
 }
 
-nav li {
-  display: inline-block;
-  margin-top: 0;
-  margin-right: 12px;
-  margin-left: 12px;
-  margin-bottom: 0;
-  text-decoration: underline;
+.hero h1,
+p {
+  text-align: center;
 }
 
-.blue-button {
-  background-color: blue;
-  text-decoration: none !important;
-  color: white;
-  padding: 0.5em;
-  border-radius: 6px;
-  width: 8em;
-  text-align: center;
-  display: inline-block;
-} 
+.hero h1 {
+  letter-spacing: 0.1rem;
+  font-size: 3rem;
+  font-weight: 400;
+}
 
-.signup-form form input[type=submit] {
-  border: none;
-  background-color: blue;
-  text-decoration: none !important;
-  color: white;
-  padding: 0.5em;
-  border-radius: 6px;
-  width: 8em;
+.hero p {
+  font-size: 1.5rem;
+  width: 25%;
+  margin: 0 auto;
+  font-weight: 200;
+}
+
+.hero iframe {
+  display: flex;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin: 0 auto;
+}
+
+.signup {
+  border-top: 2px solid lightgray;
+  width: 95%;
+  padding: 2em;
+  margin: 0 auto;
+}
+
+.signup h3 {
+  font-weight: 400;
+  font-size: 2rem;
   text-align: center;
-  display: inline-block;
+}
+
+.signup p {
+  width: 25%;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+.signup input {
+  border: 2px solid lightgray;
+  border-radius: .2em;
+  margin: .5em;
+  height: 4em;
+}
+
+.signup,
+.signup__form,
+.signup--name,
+h3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup--name input,
+.signup--info input {
+  padding-left: 1em;
+}
+
+.signup--name {
+  flex-direction: row;
+  width: 30%;
+  margin: 0 auto;
+}
+
+.signup--name input {
+  width: 100%;
+}
+
+.signup--info{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.signup__button input {
+  width: 10%;
+  color: var(--kenziemain);
+  font-size: 1rem;
+  border: .2em solid var(--kenziemain);
+}
+
+.signup__button{
+  display: flex;
+  justify-content: center;
 }
